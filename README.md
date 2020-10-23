@@ -68,6 +68,11 @@ we'll see the following output:
 <img width="964" alt="Solution" src="https://github.com/jaimehernan95/hourGlass-Array-Java/blob/master/images/result.png">
 
 
+### hacker rank challenge
+
+Counter game
+Louise and Richard play a game, find the winner of the game.
+
 ```
 import java.io.*;
 import java.math.*;
@@ -95,9 +100,52 @@ public class Solution {
                 arr[i][j] = arrItem;
             }
         }
-
         scanner.close();
-    }
+
+        int count = Integer.MIN_VALUE;
+
+        for (int i = 0; i < arr.length-1; i++){
+        for (int j = 0; j < arr.length; j++){
+
+        if (i >= arr.length-2 || j >= arr.length-2){
+        }
+            else {
+                int temp = 0;
+                int firsTemp = arr[i][j] + arr[i][j+1] + arr[i][j+2];
+                int secondTemp = arr[i+1][j+1];
+                int ThirdTemp = arr[i+2][j]+arr[i+2][j+1]+arr[i+2][j+2];
+
+                temp = firsTemp +  secondTemp +  ThirdTemp;
+
+                if 
+                (temp > count) {
+                count = temp;
+                }
+                }
+                }
+                }
+
+                  System.out.println(count);
+        }
+
 }
 
+
+```
+
+### Result
+
+```
+Input (stdin)
+
+1 1 1 0 0 0
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 2 4 4 0
+0 0 0 2 0 0
+0 0 1 2 4 0
+
+Expected Output
+
+19
 ```
